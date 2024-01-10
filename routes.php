@@ -1,10 +1,10 @@
 <?php
 require './autoload.php';
 
-Route::get("/", function() {
+Http::get("/", function() {
     Home::index();
 });
 
-Route::get("/about", function() {
+Http::get("/about", function() {
     About::index();
 });

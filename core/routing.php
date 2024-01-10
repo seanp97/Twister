@@ -1,6 +1,6 @@
 <?php
 
-class Route {
+class Http {
 
     static function path($path, $file) {
         try {

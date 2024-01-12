@@ -1,6 +1,9 @@
 <?php 
     inc_header();
     inc_ctrlr('Home');
+
+    // Set title
+    Title('Home Page');
 ?>
 
 <h5>Home</h5>

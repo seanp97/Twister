@@ -7,4 +7,7 @@ class Home {
         view("Home/index");
     }
 
+    static function hello() {
+        return 'Hello World';
+    }
 }

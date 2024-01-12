@@ -45,6 +45,23 @@ function inc_ctrlr($controller) {
 
 }
 
+function LoadPartial($name) {
+    if(!$name || empty($name)) die('No valid partial supplied');
+
+    try {
+        if(str_contains($name, '.php')) {
+            include_once "./partials/$name";
+        }
+        else {
+            include_once "./partials/$name.php";
+        }
+        
+    }
+    catch(Exception $e) {
+        die('Error loading partial');
+    }
+}
+
 function JSONShow($query) {
 
     try {

@@ -10,4 +10,6 @@
 
 <h4><?php echo Home::hello(); ?></h4>
 
+<?php LoadPartial('hello'); ?>
+
 <?php inc_footer(); ?>

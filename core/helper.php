@@ -1,5 +1,50 @@
 <?php
 
+function base_url(){
+    return sprintf(
+      "%s://%s%s",
+      isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
+      $_SERVER['SERVER_NAME'],
+      $_SERVER['REQUEST_URI']
+    );
+}
+
+function inc_header() {
+    include_once "./base/header.php";
+}
+
+function inc_footer() {
+    include_once "./base/footer.php";
+}
+
+function inc_ctrlr($controller) {
+    if(empty($controller) || !$controller) die('No controller name passed in');
+
+    try {
+        
+        if(!str_contains($controller, '.php')) {
+            if(!str_contains($controller, 'Controller')) {
+                include_once "../../{$controller}Controller.php";
+            }
+            else {
+                include_once "../../{$controller}.php";
+            }
+        }
+        else {
+            if(!str_contains($controller, 'Controller')) {
+                include_once "../../{$controller}Controller";
+            }
+            else {
+                include_once "../../$controller";
+            }
+        }
+    }
+    catch(Exception $e) {
+        echo "Unable to load controller";
+    }
+
+}
+
 function JSONShow($query) {
 
     try {

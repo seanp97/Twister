@@ -1,6 +1,6 @@
-<?php include_once "./base/header.php"; ?>
+<?php inc_header(); ?>
 
 <h5>Home</h5>
 
 
-<?php include_once "./base/footer.php"; ?>
+<?php inc_footer(); ?>

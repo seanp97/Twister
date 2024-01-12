@@ -17,7 +17,7 @@ function inc_footer() {
     include_once "./base/footer.php";
 }
 
-function inc_ctrlr($controller) {
+function inc_controller($controller) {
     if(empty($controller) || !$controller) die('No controller name passed in');
 
     try {

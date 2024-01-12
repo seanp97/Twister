@@ -1,6 +1,6 @@
 <?php 
     inc_header();
-    inc_ctrlr('Home');
+    inc_controller('Home');
 
     // Set title
     Title('Home Page');

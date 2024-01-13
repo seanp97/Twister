@@ -7,7 +7,7 @@
 
 <h5>Home</h5>
 
-<h4><?php echo Home::hello(); ?></h4>
+<h4><?= Home::hello(); ?></h4>
 
 <?php LoadPartial('hello'); ?>
 

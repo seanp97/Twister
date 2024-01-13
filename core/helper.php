@@ -17,7 +17,7 @@ function inc_footer() {
     include_once "./base/footer.php";
 }
 
-function inc_controller($controller) {
+/*function inc_controller($controller) {
     if(empty($controller) || !$controller) die('No controller name passed in');
 
     try {
@@ -43,7 +43,7 @@ function inc_controller($controller) {
         echo "Unable to load controller";
     }
 
-}
+}*/
 
 function LoadPartial($name) {
     if(!$name || empty($name)) die('No valid partial supplied');

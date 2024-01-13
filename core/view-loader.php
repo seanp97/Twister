@@ -8,7 +8,6 @@ function view($file) {
         else {
             require $file . ".php";
         }
-       
     }
     
     else {
@@ -20,4 +19,5 @@ function view($file) {
         }
         
     }
+
 }

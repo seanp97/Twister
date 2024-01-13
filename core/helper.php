@@ -24,18 +24,18 @@ function inc_controller($controller) {
         
         if(!str_contains($controller, '.php')) {
             if(!str_contains($controller, 'Controller')) {
-                include_once "../../{$controller}Controller.php";
+                include_once "./controllers/{$controller}Controller.php";
             }
             else {
-                include_once "../../{$controller}.php";
+                include_once "./controllers/{$controller}.php";
             }
         }
         else {
             if(!str_contains($controller, 'Controller')) {
-                include_once "../../{$controller}Controller";
+                include_once "./controllers/{$controller}Controller";
             }
             else {
-                include_once "../../$controller";
+                include_once "./controllers/$controller";
             }
         }
     }
